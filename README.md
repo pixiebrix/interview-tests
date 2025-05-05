@@ -2,6 +2,8 @@
 
 ### Interview Format
 
+You will be steering/driving. Have them guide you through how to fix the problem/do the task.
+
 - Skill: Can they use the Javascript brick
 - Skill: Can they style a panel with CSS
 - Skill: Can they implement basic error handling for a network request
@@ -48,8 +50,8 @@ Bug 5: why isn't the task staying deleted? (Part 1)
 
 Bug 6: why isn't the task staying deleted? (Part 2)
 
-- Solution: Move the server call before the UI call. Show an alert if the server call fails.
-- Skills tested: have the explain error handling UX approaches
+- Solution: Move the server call before the UI call. Show an alert if the server call fails (`alert("message")` is OK)
+- Skills tested: have the explain better handling UI/UX
 
 Task 7: write a "retry" method and apply it to the POST/DELETE methods
 
