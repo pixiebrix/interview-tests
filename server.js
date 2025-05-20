@@ -8,6 +8,7 @@ const port = 3000;
 
 // Middleware
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname))); // Serve static files from current directory
 
 // Database setup
 const db = new sqlite3.Database(":memory:");
@@ -56,8 +57,6 @@ app.post("/api/tasks/", (req, res) => {
         res.status(201).json({ id: this.lastID, title });
     });
 });
-
-
 
 // DELETE /tasks/:taskId/ - Delete a task
 app.delete("/api/tasks/:taskId/", (req, res) => {
