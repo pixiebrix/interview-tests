@@ -1,7 +1,7 @@
 const $todoInput = $("#todo-input");
 
 // Listen For Custom Events
-document.addEventListener("onAddRow", function (e) {
+document.addEventListener("onTelemetry", function (e) {
     console.log("[TELEMETRY] - Event Received", e.eventData);
 });
 
@@ -123,7 +123,7 @@ $(".add-btn").on("click", async (e) => {
         if (state.isSuccess && !state.isLoading) {
             addTodoRow(state.data);
 
-            const event = new CustomEvent('onAddRow', {
+            const event = new CustomEvent('onTelemetry', {
                 eventData: { ...state.data }
             });
 
